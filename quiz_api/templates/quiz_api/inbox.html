@@ -1,0 +1,34 @@
+{% extends "quiz_api/layout.html" %}
+{% load static %}
+
+{% block body %}
+    <div class="main-container">
+        <div class="head-part">
+            <button id="leader">leaderboard</button>
+            <h2 id="main_title">quizzko</h2>
+            <h2 id="sign">sign is as:{{ request.user.username }}
+            <a class="btn btn-sm btn-outline-primary" href="{% url 'logout' %}">Log Out</a>
+            </h2>
+        </div>
+        
+        </div>
+    </div>
+    <div class="lower-part">
+        <div class="row-flex">
+            <div id="leaderboarddiv"></div>
+            <div id="categories">
+
+            </div>
+        </div>
+
+        <div class="row-flex">
+            <button id="score-btn">Score: 0</button>
+            <div id="each_question">
+        </div>
+    </div>
+    <button id="back">back</button>
+
+{% endblock %}
+
+{% block script %}
+{% endblock %}
